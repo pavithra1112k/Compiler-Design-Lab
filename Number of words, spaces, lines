@@ -1,0 +1,32 @@
+#Write a program to accept input streams.
+#Identify
+#i)Number of words
+#ii)Number of spaces
+#iii)Number of lines
+
+def no_of_lines():
+    print("Enter Your Input")
+    inputs = []
+    linescount=0
+    wordcount=0
+    spacecount=0
+    words=[]
+    while True:
+        line = input()
+        if line:
+            inputs.append(line)
+            linescount+=1
+            wordcount+=len(line.split())
+            spacecount+=len(line.split())-1
+        else:
+            break
+        
+    text = '\n'.join(inputs)
+    print(text)
+    return [linescount,wordcount,spacecount];
+list=no_of_lines()
+print("No of words ",list[1])
+print("No of spaces ",list[2])
+print("No of lines ",list[0])
+
+

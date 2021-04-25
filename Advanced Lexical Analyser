@@ -1,0 +1,132 @@
+#Merging all the below programs
+#i)To find whether the input is digit or not.
+i#i)To find whether the input is a float number or not.
+#iii)To find whether the input is an Upper Case Alphabet or not.
+#iv)To find whether the input is a Lower Case Alphabet or not.
+#v)To find whether the input is a Special Symbol or not.
+#vi)To find whether the input is an Arithmetic Operator or not.
+#vii)To find whether the input is a Keyword or not.
+#viii)To find whether the input is an Arithmetic Expression or not.
+
+
+
+print("1-To check for Digit")
+print("2-To check for Float")
+print("3-To check for Upper Case Alphabet")
+print("4-To check for Lower Case Alphabet")
+print("5-To check for Special Symbol")
+print("6-To check for Arithmetic Operator")
+print("7-To check for Keywords")
+print("8-To check for Arithmetic Expression")
+z=1
+while(z):
+    print("Choose an option ")
+    key=int(input())
+    if key==1:
+        s=True
+        while(s):
+            print("Enter a single character ")
+            n=input()
+            if len(n)!=1:
+                s=True
+                print("You entered an invalid Input")
+            else:
+                s=False
+
+            
+        if n.isnumeric():
+            print("The input given is a DIGIT");
+        else:
+            print("The input given is not a DIGIT");
+    elif key==2:
+        import re;
+        n=input("Enter your input ")
+        if re.match("^\d+.+\d+$",n):
+            print("The given input is a float number")
+        else:
+            print("The given input is not a float number")
+
+    elif key==3:
+        s=True
+        while(s):
+            print("Enter a single character ")
+            n=input()
+            if len(n)!=1:
+                s=True
+                print("You entered an invalid Input")
+            else:
+                s=False
+
+                
+        if n.isupper():
+            print("The input given is an UPPER CASE alphabet");
+        else:
+            print("The input given is not an UPPER CASE alphabet");
+    elif key==4:
+        s=True
+        while(s):
+            print("Enter a single character ")
+            n=input()
+            if len(n)!=1:
+                s=True
+                print("You entered an invalid Input")
+            else:
+                s=False
+
+        if n.islower():
+            print("The input given is a LOWER CASE alphabet");
+        else:
+            print("The input given is not a LOWER CASE alphabet");
+    elif key==5:
+        s=True
+        while(s):
+            print("Enter a single character ")
+            n=input()
+            if len(n)!=1:
+                s=True
+                print("You entered an invalid Input")
+            else:
+                s=False
+
+        if ord(n)>=33 and ord(n)<=47 or ord(n)>=58 and ord(n)<=64 or ord(n)>=91 and ord(n)<=96 or ord(n)>=123 and ord(n)<=127:
+            print("The input given is a special symbol ");
+        else:
+            print("The input given is not a special symbol");
+    elif key==6:
+        s=True
+        while(s):
+            print("Enter a single character ")
+            n=input()
+            if len(n)!=1:
+                s=True
+                print("You entered an invalid Input")
+            else:
+                s=False
+        if n in ['+','-','*','%','/']:
+            print("The input given is an arithmetic operator")
+
+        else:
+            print("The input given is not an Arithmetic operator");
+    elif key==7:
+        s=input("Enter your input ")
+        k=s.lower()
+        l=['int','float','char','double','auto','break','const','else','long','short','struct','switch','unsigned','case','continue','default','do','enum','extern','for','goto','if',
+     'register','return','signed','sizeof','static','typedef','union','void','volatile','while']
+        if k in l:
+             print("The input given is a keyword")
+        else:
+             print("The input given is not a keyword")
+            
+    elif key==8:
+        import re
+        s=input();
+        if re.match("^\-?[0-9 | a-zA-Z ](([-+/][0-9 | a-zA-Z]+)?([.,][0-9 | a-zA-Z]+)?)?$",s) :
+        # if re.match("^[(]?[-]?([0-9]+)[)]??([(]?([-+/]([0-9]))?([.,][0-9]+)?[)]?)$",s) :
+            print("The input given is an Arithmetic Expression")
+        else: print("The input given is not an Arithmetic Expression")
+    print("Do you want to continue 1-yes,0-no")
+    z=int(input())
+    if z==0:
+        print("THANKYOU")
+        
+        

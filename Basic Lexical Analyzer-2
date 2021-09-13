@@ -1,0 +1,15 @@
+s=True
+while(s):
+    print("Enter a single character")
+    n=input()
+    if len(n)!=1:
+        s=True
+        print("You entered an invalid Input")
+    else:
+        s=False
+
+    
+if n.isnumeric():
+    print("The input given is a DIGIT");
+else:
+    print("The input given is not a DIGIT");
